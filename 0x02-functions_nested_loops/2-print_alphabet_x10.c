@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * a function that prints 10 times the alphabet,
- * in lowercase,
- * 
+ * print_alphabet_x10 - prints 10 times the alphabet, in lowercase
  *
- * Return: void (no return)
+ * Return: no return
+ *
  */
+
 void print_alphabet_x10(void)
 {
 	char a;

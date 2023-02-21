@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *times_table - function that prints the 9 times table, starting with 0
- * Return: time table of 9.
+ * jack_bauer - prints time table in this format: HH:MM
+ * Return: the sum of two numbers.
  */
 void jack_bauer(void)
 {

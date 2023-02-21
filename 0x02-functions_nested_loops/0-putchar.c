@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
+
 /**
- * main - Entry point
+ * main - Prints Holberton as a message.
  *
  * Return: Always 0 (Success)
  */

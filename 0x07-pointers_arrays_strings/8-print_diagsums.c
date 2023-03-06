@@ -1,27 +1,29 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * *_strstr - locates a substring
- * @haystack: string to search in
- * @needle: substring to look for
- *
- * Return: pointer to the beginning of the located substring
- * or NULL if the substring is not found
+ * print_diagsums - prints og two diagonal of a square
+ * @a: pointer to array
+ * @size: size of array
+ * Return: void
  */
-char *_strstr(char *haystack, char *needle)
+void print_diagsums(int *a, int size)
 {
-	int i, j;
+	int i, size1;
+	unsigned int sumDiag1, sumDiag2;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	size1 = 0;
+	sumDiag1 = 0;
+	sumDiag2 = 0;
+
+	size1 = (size * size) - 1;
+
+	for (i = 0; i <= size1; i = i + (size + 1))
 	{
-		for (j = 0; needle[j] != '\0'; j++)
-		{
-			if (haystack[i + j] != needle[j])
-				break;
-		}
-		if (!needle[j])
-			return (&haystack[i]);
+		sumDiag1 = sumDiag1 + a[i];
 	}
-	return (NULL);
+	for (i = (size - 1); i < size1; i = i + (size - 1))
+	{
+		sumDiag2 = sumDiag2 + a[i];
+	}
+	printf("%d, %d\n", sumDiag1, sumDiag2);
 }

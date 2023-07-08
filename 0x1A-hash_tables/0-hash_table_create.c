@@ -9,10 +9,10 @@
  * Return: A pointer to the newly created hash table,
  *         or NULL if memory allocation fails
  */
-HashTable *hash_table_create(unsigned long int size)
+hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
-	HashTable *hashTable = malloc(sizeof(HashTable));
+	hash_table_t *hashTable = malloc(sizeof(hash_table_t));
 
 	if (hashTable == NULL)
 	{

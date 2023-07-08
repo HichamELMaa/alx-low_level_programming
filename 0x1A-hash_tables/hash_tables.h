@@ -6,12 +6,12 @@
  * @key: The key of the pair
  * @value: The value associated with the key
  */
-typedef struct KeyValuePair
+typedef struct hash_node_s
 {
     char *key;
     char *value;
-    struct KeyValuePair *next;
-} KeyValuePair;
+    struct hash_node_s *next;
+} hash_node_t;
 
 /**
  * @size: The size of the hash table array
@@ -20,7 +20,7 @@ typedef struct KeyValuePair
 typedef struct hash_table_s
 {
     unsigned long int size;
-    KeyValuePair **array;
+    hash_node_t **array;
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);

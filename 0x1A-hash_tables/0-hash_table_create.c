@@ -11,25 +11,27 @@
  */
 HashTable *hash_table_create(unsigned long int size)
 {
-    unsigned long int i;
-    HashTable *hashTable = malloc(sizeof(HashTable));
-    if (hashTable == NULL)
-    {
-        return NULL;
-    }
+	unsigned long int i;
+	HashTable *hashTable = malloc(sizeof(HashTable));
 
-    hashTable->size = size;
-    hashTable->array = malloc(size * sizeof(KeyValuePair *));
-    if (hashTable->array == NULL)
-    {
-        free(hashTable);
-        return NULL;
-    }
+	if (hashTable == NULL)
+	{
+		return (NULL);
+	}
 
-    for (i = 0; i < size; i++)
-    {
-        hashTable->array[i] = NULL;
-    }
+	hashTable->size = size;
+	hashTable->array = malloc(size * sizeof(KeyValuePair *));
 
-    return hashTable;
+	if (hashTable->array == NULL)
+	{
+		free(hashTable);
+		return (NULL);
+	}
+
+	for (i = 0; i < size; i++)
+	{
+		hashTable->array[i] = NULL;
+	}
+
+	return (hashTable);
 }
